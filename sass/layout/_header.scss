@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    padding: 10px 20px;
+    background: #333333;
+    position: fixed;
+    top: 0;
+
+    @media screen and (min-width: 1024px) {
+        width: 300px;
+        height: 100vh;
+        padding: 50px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        @media screen and (min-width: 1024px) {
+            height: 100%;
+            flex-direction: column;
+        }
+    }
+
+    &__ttl {
+        color: #fff;
+        font-size: 24px;
+    }
+}
+
+.btn {
+    // 棒線を全て中央寄せ
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    // 棒線
+    &__top {
+        @include btn(-16px);
+    }
+
+    &__middle {
+        @include btn;
+    }
+
+    &__bottom {
+        @include btn(16px);
+    }
+
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}

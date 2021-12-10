@@ -1,0 +1,54 @@
+.gnav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flex-center;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+  
+    @media screen and (min-width: 1024px) {
+      width: auto;
+      height: auto;
+      display: block;
+      position: static;
+      transform: none;
+      background: none;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &__nav {
+      width: 260px;
+      transform: translateY(50px);
+      transition: .5s;
+      opacity: 0;
+      @media screen and (min-width: 768px) {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  
+    &__list {
+      transition: .4s;
+      padding: 20px;
+    }
+  
+    &__link {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      padding: 20px 0;
+  
+      @media screen and (min-width: 1024px) {
+        padding: 30px 0;
+        font-size: 16px;
+      }
+    }
+  }

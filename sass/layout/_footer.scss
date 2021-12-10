@@ -1,0 +1,11 @@
+.footer {
+    background: #333333;
+    padding: 20px 0;
+    &__txt {
+        color: #fff;
+        text-align: center;
+        @media screen and (min-width: 1024px) {
+            padding-left: 300px;
+        }
+    }
+}
